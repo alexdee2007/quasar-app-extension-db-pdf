@@ -1,9 +1,6 @@
 <template>
   <div :style="{cursor: loaded && !error ? 'zoom-in' : 'default', height, width}" class="q-bordered rounded-borders">
-    <div v-if="error" class="text-center text-red q-pt-xl">
-      <q-icon name="warning" style="font-size: 2rem;" />
-      <div class="text-caption q-pt-md">Помилка завантаження</div>
-    </div>
+    <q-icon v-if="error" name="warning" color="red" class="fit" style="border-radius: 4px; padding: 0 12px; border: 1px solid;" />
     <pdf :src="pdfSrc" ref="pdf" @loaded="loaded = true" @error="onError"></pdf>
     <template>
       <slot></slot>
