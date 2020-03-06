@@ -1,6 +1,6 @@
 <template>
   <div :style="{cursor: loaded && !error ? 'zoom-in' : 'default', height, width}" class="q-bordered rounded-borders">
-    <div v-if="error" class="absolute-center text-red q-pb-xl">
+    <div v-if="error" class="text-center text-red q-pt-xl">
       <q-icon name="warning" style="font-size: 2rem;" />
       <div class="text-caption q-pt-md">Помилка завантаження</div>
     </div>
