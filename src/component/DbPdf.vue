@@ -1,6 +1,6 @@
 <template>
   <div :style="{cursor: loaded && !error ? 'zoom-in' : 'default', height, width}" class="q-bordered rounded-borders">
-    <q-icon v-if="error" name="warning" color="red" class="fit" style="border-radius: 4px; padding: 0 12px; border: 1px solid;" />
+    <img v-if="error" src="../assets/file404.png" class="fit" style="object-fit: contain;">
     <pdf :src="pdfSrc" ref="pdf" @loaded="loaded = true" @error="onError"></pdf>
     <template>
       <slot></slot>
