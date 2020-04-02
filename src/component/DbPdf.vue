@@ -15,7 +15,6 @@
 <script>
 
   import pdf from 'vue-pdf';
-  import minioApi from 'src/api/minio';
 
   export default {
     name: 'DbPdf',
@@ -52,7 +51,7 @@
       },
       async getPdfSrc() {
         try {
-          this.pdfSrc = await minioApi.getPresignedUrlForGet(this.fileName);
+          this.pdfSrc = await this.$api.minio.getPresignedUrlForGet(this.fileName);
         } catch (err) {
           console.error(err);
         }
