@@ -14,7 +14,7 @@
 
 <script>
 
-  import pdf from 'vue-pdf/src/vuePdfNoSssNoWorker';
+  import pdf from 'vue-pdf';
 
   export default {
     name: 'DbPdf',
